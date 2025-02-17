@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripciones</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="download.png" alt="Logo del Sitio" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">home</a></li>
+                <li><a href="contact.html" class="nav-link active">contact</a></li>
+                <li><a href="subs.html" class="nav-link">subs</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="auth-button grey">Login</a>
+              
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="subs-section">
+            <h2>make your sub</h2>
+            <p>select one of those subs</p>
+
+        
+            <div class="subs-container">
+              
+                <div class="sub-box" onclick="navigateToPayment('1-month')">
+                    <h3>1 month</h3>
+                    <p>Precio: $9.99</p>
+                    <p>Unlimited access for 1 month.</p>
+                    <button class="sub-button">payment</button>
+                </div>
+
+            
+                <div class="sub-box" onclick="navigateToPayment('3-months')">
+                    <h3>3 Months</h3>
+                    <p>Price: $24.99</p>
+                    <p>Save with our quarterly offer.</p>
+                    <button class="sub-button">payment</button>
+                </div>
+
+            
+                <div class="sub-box" onclick="navigateToPayment('1-year')">
+                    <h3>1 year</h3>
+                    <p>Price: $89.99</p>
+                    <p></p>
+                    <button class="sub-button">payment</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  
+    <footer class="footer">
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        function navigateToPayment(type) {
+            window.location.href = `payment.html?type=${type}`;
+        }
+    </script>
+</body>
+</html>

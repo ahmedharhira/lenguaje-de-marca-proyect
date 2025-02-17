@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="download.png" alt="Website Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="subs.html" class="nav-link">Subs</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="auth-button grey">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="header-actions">
+            <div class="filter-container">
+                <label for="genreFilter">FILTER</label>
+                <select id="genreFilter" onchange="filterByType()">
+                    <option value="all">All</option>
+                    <option value="Ciencia Ficción">Science Fiction</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Acción">Action</option>
+                </select>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Buscar película por nombre..." oninput="filterMovies()">
+                <button class="search-button" type="button">🔍</button>
+            </div>
+        </div>
+
+        
+        <section class="movie-container">
+            <button class="scroll-button left" onclick="scrollMovies('left')">❮</button>
+            <div id="movieContainer" class="movie-box-container"></div>
+            <button class="scroll-button right" onclick="scrollMovies('right')">❯</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

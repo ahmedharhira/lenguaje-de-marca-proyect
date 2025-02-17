@@ -1,0 +1,18 @@
+<peliculas>
+    <pelicula>
+        <titulo>Inception</titulo>
+        <type>Ciencia Ficción, Thriller</type>
+        <descripcion>Un ladrón que roba secretos a través de los sueños recibe la oportunidad de redimirse al plantar una idea en la mente de alguien.</descripcion>
+        <actores>
+            <actor>Leonardo DiCaprio</actor>
+            <actor>Joseph Gordon-Levitt</actor>
+        </actores>
+        <anio>2010</anio>
+        <imagen>th.jpeg</imagen>
+    </pelicula>
+    <pelicula>
+        <titulo>The Shawshank Redemption</titulo>
+        <anio>1994</anio>
+        <imagen></imagen>
+    </pelicula>
+</peliculas>

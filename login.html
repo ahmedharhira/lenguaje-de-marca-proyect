@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+   
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="download.png" alt="Logo del Sitio" class="logo">
+                
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">home</a></li>
+                <li><a href="contact.html" class="nav-link active">contact</a></li>
+                <li><a href="subs.html" class="nav-link">subs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <h2>Login</h2>
+            <p>Enter your details to access your account.</p>
+
+            <form id="loginForm" onsubmit="return validateLogin()">
+              
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">password:</label>
+                    <input type="password" id="password" name="password" placeholder="********" required>
+                </div>
+
+              
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="rememberMe" name="rememberMe"> Remember me
+                    </label>
+                </div>
+
+             
+                <button type="submit" class="submit-button">Login</button>
+
+          
+                <p class="forgot-password"><a href="forgot-password.html">Forgot your password?</a></p>
+
+             
+                <p class="register-link">Don't have an account?<a href="register.html">Register here</a>.</p>
+            </form>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function validateLogin() {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+
+         
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Por favor, ingresa un correo electrónico válido.');
+                return false;
+            }
+
+          
+            if (password.length < 6) {
+                alert('La contraseña debe tener al menos 6 caracteres.');
+                return false;
+            }
+
+         
+            alert('Inicio de sesión exitoso. ¡Bienvenido!');
+            return true;
+        }
+    </script>
+</body>
+</html>
