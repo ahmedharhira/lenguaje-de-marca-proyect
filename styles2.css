@@ -1,48 +1,68 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Arial", sans-serif;
-  }
-  
-  body {
-    background-color: #121212;
-    color: #ffffff;
-    line-height: 1.6;
-  }
-  
+:root {
+  --primary-color: red;
+  --secondary-color: black;
+  --background-color: black;
+  --text-color: red ;
+  --border-radius: 8px;
+}
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: #1e1e1e;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo img {
-    height: 40px;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-  }
-  
-  .nav-link {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .nav-link:hover,
-  .nav-link.active {
-    background-color: #333333;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+  height: 50px;
+  width: auto; 
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color);
+}
+
+.auth-button {
+  background-color: var(--primary-color);
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: white;
+}
+
   
   .auth-button {
     padding: 0.5rem 1rem;
@@ -125,7 +145,7 @@
   }
   
   .sub-button:hover {
-    background-color: red;
+    background-color:black;
   }
   
   
@@ -134,11 +154,9 @@
     color: #bbbbbb;
     text-align: center;
     padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-bottom: 40% ;
   }
-  
+
   
   @media (max-width: 768px) {
     .navbar {

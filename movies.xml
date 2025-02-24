@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies>
+    <movie>
+        <title>Inception</title>
+        <genre>Ciencia Ficción</genre>
+        <image>th.jpeg</image>
+        <actors>Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page</actors>
+        <description>A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.</description>
+        <trailer>https://youtu.be/YoHD9XEInc0?si=_A4zx71DyroS30TD</trailer>
+    </movie>
+    <movie>
+        <title>The Shawshank Redemption</title>
+        <genre>Drama</genre>
+        <image>https://example.com/images/shawshank.jpg</image>
+        <actors>Tim Robbins, Morgan Freeman</actors>
+        <description>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</description>
+        <trailer>https://www.youtube.com/watch?v=6hB3S9bIaco</trailer>
+    </movie>
+    <movie>
+        <title>The Dark Knight</title>
+        <genre>Acción</genre>
+        <image>https://example.com/images/dark_knight.jpg</image>
+        <actors>Christian Bale, Heath Ledger, Aaron Eckhart</actors>
+        <description>When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.</description>
+        <trailer>https://www.youtube.com/watch?v=EXeTwQWrcwY</trailer>
+    </movie>
+    <movie>
+        <title>Interstellar</title>
+        <genre>Ciencia Ficción</genre>
+        <image>https://example.com/images/interstellar.jpg</image>
+        <actors>Matthew McConaughey, Anne Hathaway, Jessica Chastain</actors>
+        <description>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</description>
+        <trailer>https://www.youtube.com/watch?v=zSWdZVtXT7E</trailer>
+    </movie>
+    <movie>
+        <title>Fight Club</title>
+        <genre>Drama</genre>
+        <image>https://example.com/images/fight_club.jpg</image>
+        <actors>Brad Pitt, Edward Norton, Helena Bonham Carter</actors>
+        <description>An insomniac office worker forms an underground fight club with a soap salesman.</description>
+        <trailer>https://www.youtube.com/watch?v=SUXWAEX2jLg</trailer>
+    </movie>
+    
+</movies>
