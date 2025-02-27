@@ -1,44 +1,326 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movies>
-    <movie>
-        <title>Inception</title>
-        <genre>Ciencia Ficción</genre>
-        <image>th.jpeg</image>
-        <actors>Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page</actors>
-        <description>A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.</description>
-        <trailer>https://youtu.be/YoHD9XEInc0?si=_A4zx71DyroS30TD</trailer>
-    </movie>
-    <movie>
-        <title>The Shawshank Redemption</title>
-        <genre>Drama</genre>
-        <image>https://example.com/images/shawshank.jpg</image>
-        <actors>Tim Robbins, Morgan Freeman</actors>
-        <description>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</description>
-        <trailer>https://www.youtube.com/watch?v=6hB3S9bIaco</trailer>
-    </movie>
-    <movie>
-        <title>The Dark Knight</title>
-        <genre>Acción</genre>
-        <image>https://example.com/images/dark_knight.jpg</image>
-        <actors>Christian Bale, Heath Ledger, Aaron Eckhart</actors>
-        <description>When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.</description>
-        <trailer>https://www.youtube.com/watch?v=EXeTwQWrcwY</trailer>
-    </movie>
-    <movie>
-        <title>Interstellar</title>
-        <genre>Ciencia Ficción</genre>
-        <image>https://example.com/images/interstellar.jpg</image>
-        <actors>Matthew McConaughey, Anne Hathaway, Jessica Chastain</actors>
-        <description>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</description>
-        <trailer>https://www.youtube.com/watch?v=zSWdZVtXT7E</trailer>
-    </movie>
-    <movie>
-        <title>Fight Club</title>
-        <genre>Drama</genre>
-        <image>https://example.com/images/fight_club.jpg</image>
-        <actors>Brad Pitt, Edward Norton, Helena Bonham Carter</actors>
-        <description>An insomniac office worker forms an underground fight club with a soap salesman.</description>
-        <trailer>https://www.youtube.com/watch?v=SUXWAEX2jLg</trailer>
-    </movie>
-    
+    <movies>
+    <movie id="1">
+    <title>Inception</title>
+    <genre>Ciencia ficción</genre>
+    <image>xymM5aW6MDcH5AR9I3CamSegJd6.jpg</image>
+    <actors>Leonardo DiCaprio, Joseph Gordon-Levitt</actors>
+    <description>A thief who enters the dreams of others to steal secrets from their subconscious is given a chance to have his criminal record erased.</description>
+    <trailer>https://www.youtube.com/embed/YoHD9XEInc0</trailer>
+</movie>
+
+<movie id="2">
+    <title>The Dark Knight</title>
+    <genre>Acción</genre>
+    <image>dark_knight.jpg</image>
+    <actors>Christian Bale, Heath Ledger</actors>
+    <description>Batman faces the Joker.</description>
+    <trailer>https://www.youtube.com/embed/EXeTwQWrcwY</trailer>
+</movie>
+
+<movie id="3">
+    <title>Interstellar</title>
+    <genre>Ciencia ficción</genre>
+    <image>th (1).jpeg</image>
+    <actors>Matthew McConaughey, Anne Hathaway</actors>
+    <description>A group of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</description>
+    <trailer>https://www.youtube.com/embed/zSWdZVtXT7E</trailer>
+</movie>
+
+<movie id="4">
+    <title>The Matrix</title>
+    <genre>Ciencia ficción</genre>
+    <image>385304.jpg</image>
+    <actors>Keanu Reeves, Laurence Fishburne</actors>
+    <description>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</description>
+    <trailer>https://www.youtube.com/embed/vKQi3bBA1y8</trailer>
+</movie>
+
+<movie id="5">
+    <title>Gladiator</title>
+    <genre>Acción</genre>
+    <image>MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg</image>
+    <actors>Russell Crowe, Joaquin Phoenix</actors>
+    <description>A betrayed Roman general seeks revenge against the corrupt emperor who murdered his family and sent him into slavery.</description>
+    <trailer>https://www.youtube.com/embed/owK1qxDselE</trailer>
+</movie>
+
+<movie id="6">
+    <title>The Lion King</title>
+    <genre>Animación</genre>
+    <image>lion_king.jpg</image>
+    <actors>Matthew Broderick, Jeremy Irons</actors>
+    <description>The lion cub Simba is destined to succeed his father, but his uncle Scar has plans of his own.</description>
+    <trailer>https://www.youtube.com/embed/4sj1MT05lAA</trailer>
+</movie>
+<movie id="7">
+    <title>Avatar</title>
+    <genre>Aventura</genre>
+    <image>avatar.jpg</image>
+    <actors>Sam Worthington, Zoe Saldana</actors>
+    <description>A paraplegic former Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following his orders and protecting the indigenous people.</description>
+    <trailer>https://www.youtube.com/embed/5PSNL1qE6VY</trailer>
+</movie>
+
+<movie id="8">
+    <title>Forrest Gump</title>
+    <genre>Drama</genre>
+    <image>forrest_gump.jpg</image>
+    <actors>Tom Hanks, Robin Wright</actors>
+    <description>The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal, and other historical events unfold from the perspective of an Alabama man with an extraordinary life story.</description>
+    <trailer>https://www.youtube.com/embed/bLvqoHBptjg</trailer>
+</movie>
+
+<movie id="9">
+    <title>Jurassic Park</title>
+    <genre>Aventura</genre>
+    <image>jurassic_park.jpg</image>
+    <actors>Sam Neill, Laura Dern</actors>
+    <description>A pragmatic paleontologist visiting an almost complete theme park on an island in Costa Rica is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.</description>
+    <trailer>https://www.youtube.com/embed/CrJfXf1ltw4</trailer>
+</movie>
+
+<movie id="10">
+    <title>The Godfather</title>
+    <genre>Crimen</genre>
+    <image>godfather.jpg</image>
+    <actors>Marlon Brando, Al Pacino</actors>
+    <description>The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</description>
+    <trailer>https://www.youtube.com/embed/sY1S34973zA</trailer>
+</movie>
+
+<movie id="11">
+    <title>Spider-Man: No Way Home</title>
+    <genre>Acción</genre>
+    <image>spiderman_no_way_home.jpg</image>
+    <actors>Tom Holland, Zendaya</actors>
+    <description>Peter Parker seeks help from Doctor Strange to erase the memories of everyone who knows that he is Spider-Man, but things go horribly wrong.</description>
+    <trailer>https://www.youtube.com/embed/JfVOs4VSpmA</trailer>
+</movie>
+
+<movie id="12">
+    <title>Shutter Island</title>
+    <genre>Thriller</genre>
+    <image>shutter_island.jpg</image>
+    <actors>Leonardo DiCaprio, Mark Ruffalo</actors>
+    <description>A U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.</description>
+    <trailer>https://www.youtube.com/embed/5iaYLCiq5RM</trailer>
+</movie>
+
+<movie id="13">
+    <title>Deadpool</title>
+    <genre>Comedia</genre>
+    <image>deadpool.jpg</image>
+    <actors>Ryan Reynolds, Morena Baccarin</actors>
+    <description>A fast-talking mercenary with a morbid sense of humor undergoes an experiment that leaves him with accelerated healing powers and a quest for revenge.</description>
+    <trailer>https://www.youtube.com/embed/5XN6HIn0L6M</trailer>
+</movie>
+
+<movie id="14">
+    <title>La La Land</title>
+    <genre>Musical</genre>
+    <image>la_la_land.jpg</image>
+    <actors>Ryan Gosling, Emma Stone</actors>
+    <description>A jazz musician and an aspiring actress fall in love, but their aspirations and different paths threaten their relationship.</description>
+    <trailer>https://www.youtube.com/embed/0pdqf4P9MB8</trailer>
+</movie>
+
+<movie id="15">
+    <title>Guardians of the Galaxy</title>
+    <genre>Aventura</genre>
+    <image>guardians_of_the_galaxy.jpg</image>
+    <actors>Chris Pratt, Zoe Saldana</actors>
+    <description>A group of intergalactic criminals must pull together to stop a fanatical warrior from taking control of the universe.</description>
+    <trailer>https://www.youtube.com/embed/d96cjJhvlMA</trailer>
+</movie>
+
+<movie id="16">
+    <title>Blade Runner 2049</title>
+    <genre>Ciencia ficción</genre>
+    <image>blade_runner_2049.jpg</image>
+    <actors>Ryan Gosling, Harrison Ford</actors>
+    <description>A young blade runner uncovers a secret that could plunge what's left of society into chaos, leading him on a quest to find Rick Deckard, a former blade runner who has been missing for three decades.</description>
+    <trailer>https://www.youtube.com/embed/gCcx85zbxz4</trailer>
+</movie>
+<movie id="17">
+    <title>Mission: Impossible - Fallout</title>
+    <genre>Acción</genre>
+    <image>mission_impossible_fallout.jpg</image>
+    <actors>Tom Cruise, Henry Cavill</actors>
+    <description>Ethan Hunt and his IMF team, along with some familiar allies, race against time after a mission goes wrong.</description>
+    <trailer>https://www.youtube.com/embed/wb49-oV0F78</trailer>
+</movie>
+
+<movie id="18">
+    <title>The Shawshank Redemption</title>
+    <genre>Drama</genre>
+    <image>shawshank_redemption.jpg</image>
+    <actors>Tim Robbins, Morgan Freeman</actors>
+    <description>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</description>
+    <trailer>https://www.youtube.com/embed/6hB3S9bIaco</trailer>
+</movie>
+
+<movie id="19">
+    <title>Frozen</title>
+    <genre>Animación</genre>
+    <image>frozen.jpg</image>
+    <actors>Idina Menzel, Kristen Bell</actors>
+    <description>When their kingdom becomes trapped in an eternal winter, Anna and her unlikely partner, Kristoff, must find her sister Elsa, the Snow Queen, to save their world.</description>
+    <trailer>https://www.youtube.com/embed/TbQm5doF_Uc</trailer>
+</movie>
+
+<movie id="20">
+    <title>Tenet</title>
+    <genre>Ciencia ficción</genre>
+    <image>tenet.jpg</image>
+    <actors>John David Washington, Robert Pattinson</actors>
+    <description>A protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.</description>
+    <trailer>https://www.youtube.com/embed/LdOM0xYxL2I</trailer>
+</movie>
+
+<movie id="21">
+    <title>Star Wars: The Force Awakens</title>
+    <genre>Aventura</genre>
+    <image>star_wars_the_force_awakens.jpg</image>
+    <actors>Daisy Ridley, John Boyega</actors>
+    <description>A scavenger named Rey, a stormtrooper defecting from the First Order, and a former pilot must join forces to defeat the menacing new threat in the galaxy.</description>
+    <trailer>https://www.youtube.com/embed/sGbxmsDFVnE</trailer>
+</movie>
+
+<movie id="22">
+    <title>The Avengers</title>
+    <genre>Acción</genre>
+    <image>avengers.jpg</image>
+    <actors>Robert Downey Jr., Chris Hemsworth</actors>
+    <description>Earth's mightiest heroes must come together and learn to fight as a team to stop the villain Loki from enslaving humanity.</description>
+    <trailer>https://www.youtube.com/embed/eOrNdBpGMv8</trailer>
+</movie>
+
+<movie id="23">
+    <title>Fight Club</title>
+    <genre>Drama</genre>
+    <image>fight_club.jpg</image>
+    <actors>Brad Pitt, Edward Norton</actors>
+    <description>An insomniac office worker and a soap salesman build a global organization to help vent male aggression.</description>
+    <trailer>https://www.youtube.com/embed/SUXWAEX2jlg</trailer>
+</movie>
+
+<movie id="24">
+    <title>The Truman Show</title>
+    <genre>Comedia</genre>
+    <image>truman_show.jpg</image>
+    <actors>Jim Carrey, Laura Linney</actors>
+    <description>Truman Burbank is the star of a reality TV show, but he is unaware that his entire life is broadcast to the world.</description>
+    <trailer>https://www.youtube.com/embed/PkcfqZtkmZ0</trailer>
+</movie>
+
+<movie id="25">
+    <title>Rocky</title>
+    <genre>Drama</genre>
+    <image>rocky.jpg</image>
+    <actors>Sylvester Stallone, Talia Shire</actors>
+    <description>A small-time boxer gets a chance to fight the heavyweight champion of the world.</description>
+    <trailer>https://www.youtube.com/embed/5RZCo8XhY2E</trailer>
+</movie>
+
+<movie id="26">
+    <title>Doctor Strange</title>
+    <genre>Acción</genre>
+    <image>doctor_strange.jpg</image>
+    <actors>Benedict Cumberbatch, Tilda Swinton</actors>
+    <description>A brilliant but arrogant neurosurgeon is forced to discover the mystical arts to heal himself after a car accident.</description>
+    <trailer>https://www.youtube.com/embed/ltg3vA6n4lY</trailer>
+</movie>
+<movie id="27">
+    <title>The Social Network</title>
+    <genre>Drama</genre>
+    <image>social_network.jpg</image>
+    <actors>Jesse Eisenberg, Andrew Garfield</actors>
+    <description>The story of the founding of Facebook, and the legal battles that followed.</description>
+    <trailer>https://www.youtube.com/embed/2RB4yHchzdY</trailer>
+</movie>
+
+<movie id="28">
+    <title>Avatar: The Way of Water</title>
+    <genre>Aventura</genre>
+    <image>avatar_2.jpg</image>
+    <actors>Sam Worthington, Zoe Saldana</actors>
+    <description>The sequel to Avatar, following Jake Sully and Neytiri as they explore the oceans of Pandora.</description>
+    <trailer>https://www.youtube.com/embed/xt4B_jfP8Mo</trailer>
+</movie>
+
+<movie id="29">
+    <title>Jumanji: Welcome to the Jungle</title>
+    <genre>Aventura</genre>
+    <image>jumanji_welcome_to_the_jungle.jpg</image>
+    <actors>Dwayne Johnson, Kevin Hart</actors>
+    <description>Four high school students are transported into the world of Jumanji, where they must complete dangerous quests to escape.</description>
+    <trailer>https://www.youtube.com/embed/2QKg5SZ_2l4</trailer>
+</movie>
+
+<movie id="30">
+    <title>Knives Out</title>
+    <genre>Misterio</genre>
+    <image>knives_out.jpg</image>
+    <actors>Daniel Craig, Chris Evans</actors>
+    <description>When a renowned crime novelist is found dead, a detective investigates the dysfunctional family to uncover the truth.</description>
+    <trailer>https://www.youtube.com/embed/qGqiHJTsRkQ</trailer>
+</movie>
+
+<movie id="31">
+    <title>Mad Max: Fury Road</title>
+    <genre>Acción</genre>
+    <image>mad_max_fury_road.jpg</image>
+    <actors>Tom Hardy, Charlize Theron</actors>
+    <description>In a post-apocalyptic wasteland, Max teams up with a warrior named Furiosa to escape a tyrannical warlord and his army.</description>
+    <trailer>https://www.youtube.com/embed/hEJnMQG9ev8</trailer>
+</movie>
+
+<movie id="32">
+    <title>Guardians of the Galaxy Vol. 2</title>
+    <genre>Aventura</genre>
+    <image>guardians_vol_2.jpg</image>
+    <actors>Chris Pratt, Zoe Saldana</actors>
+    <description>The Guardians struggle to keep their newfound family together as they unravel the mystery of Peter Quill’s parentage.</description>
+    <trailer>https://www.youtube.com/embed/2cv2ueYnKjA</trailer>
+</movie>
+
+<movie id="33">
+    <title>Interstellar</title>
+    <genre>Ciencia ficción</genre>
+    <image>interstellar.jpg</image>
+    <actors>Matthew McConaughey, Anne Hathaway</actors>
+    <description>A group of explorers set out to find a new habitable planet as Earth faces a slow extinction due to environmental collapse.</description>
+    <trailer>https://www.youtube.com/embed/zSWdZVtXT7E</trailer>
+</movie>
+
+<movie id="34">
+    <title>The Prestige</title>
+    <genre>Thriller</genre>
+    <image>prestige.jpg</image>
+    <actors>Christian Bale, Hugh Jackman</actors>
+    <description>Two magicians engage in a bitter rivalry, each attempting to outwit the other with increasingly elaborate tricks.</description>
+    <trailer>https://www.youtube.com/embed/ijXr6z8eWgA</trailer>
+</movie>
+
+<movie id="35">
+    <title>The Pursuit of Happyness</title>
+    <genre>Drama</genre>
+    <image>pursuit_of_happyness.jpg</image>
+    <actors>Will Smith, Jaden Smith</actors>
+    <description>A struggling salesman takes custody of his son as he pursues a life-changing opportunity.</description>
+    <trailer>https://www.youtube.com/embed/89Kq8h5L8U4</trailer>
+</movie>
+
+<movie id="36">
+    <title>La La Land</title>
+    <genre>Musical</genre>
+    <image>la_la_land.jpg</image>
+    <actors>Ryan Gosling, Emma Stone</actors>
+    <description>A jazz musician and an aspiring actress fall in love, but their dreams begin to pull them apart.</description>
+    <trailer>https://www.youtube.com/embed/0pdqf4P9MB8</trailer>
+</movie>
+</movies>
+
 </movies>

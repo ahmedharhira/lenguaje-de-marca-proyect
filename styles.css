@@ -2,7 +2,7 @@
   --primary-color: red;
   --secondary-color: black;
   --background-color: black;
-  --text-color: red ;
+  --text-color: red;
   --border-radius: 8px;
 }
 
@@ -28,9 +28,9 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo{
+.logo {
   height: 50px;
-  width: auto; 
+  width: auto;
 }
 
 .nav-links {
@@ -111,12 +111,18 @@ input[type="text"] {
   overflow: hidden;
 }
 
-.movie-box-container {
+#movieContainer {
   display: flex;
-  gap: 2rem; 
-  overflow-x: hidden;
+  gap: 2rem;
+  overflow-x: auto;
   scroll-behavior: smooth;
   padding: 2rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+#movieContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .scroll-button {
@@ -127,6 +133,7 @@ input[type="text"] {
   height: 40px;
   border-radius: 50%;
   background-color: white;
+  color: black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: none;
   cursor: pointer;
@@ -151,7 +158,6 @@ input[type="text"] {
   right: 1rem;
 }
 
-/* Add smooth fade effect at the edges */
 .movie-container::before,
 .movie-container::after {
   content: "";
@@ -175,12 +181,14 @@ input[type="text"] {
 
 .movie-box {
   flex: 0 0 auto;
-  width: 280px; /* Fixed width for consistent sizing */
-  background: white;
+  width: 280px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .movie-box:hover {
@@ -188,54 +196,114 @@ input[type="text"] {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-.movie-poster {
+.movie-image-container {
   width: 100%;
   height: 400px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-bottom: 1px solid #eee;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.movie-info {
-  padding: 1rem;
+.movie-box:hover .movie-poster {
+  transform: scale(1.05);
 }
 
-.movie-title {
+.movie-box h3 {
+  padding: 10px;
+  text-align: center;
+  color: var(--primary-color);
   font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.movie-year {
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .movie-genre {
+  text-align: center;
+  padding-bottom: 10px;
   font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Movie Details Page */
+.movie-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .movie-details-container {
+    flex-direction: row;
+  }
+}
+
+.movie-poster-container {
+  flex: 0 0 300px;
+}
+
+.movie-poster-large {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-info-container {
+  flex: 1;
+}
+
+.movie-info-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
   color: var(--primary-color);
 }
 
-.genre-link {
+.movie-info-container h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
   color: var(--primary-color);
+}
+
+.movie-info-container p {
+  margin-bottom: 1rem;
+}
+
+.movie-trailer-container {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.movie-trailer-container iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 12px;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
   text-decoration: none;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.genre-link:hover {
-  text-decoration: underline;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.movie-box-container::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.movie-box-container {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+.back-button:hover {
+  background-color: #c00;
 }
 
 @media (max-width: 768px) {
@@ -260,6 +328,14 @@ input[type="text"] {
   .filter-container,
   .search-container {
     margin-bottom: 1rem;
+  }
+
+  .movie-poster-container {
+    flex: 0 0 100%;
+  }
+
+  .movie-trailer-container iframe {
+    height: 250px;
   }
 }
 
