@@ -1,70 +1,137 @@
-
-async function loadMovieDetails() {
-    try {
-       
-        const params = new URLSearchParams(window.location.search);
-        const movieId = params.get('id');
-
-        if (!movieId) {
-            throw new Error('ID de película no encontrado.');
-        }
-
-     
-        const response = await fetch('peliculas.xml');
-        if (!response.ok) throw new Error('No se pudo cargar el archivo XML.');
-        const xmlText = await response.text();
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-        const movies = xmlDoc.getElementsByTagName('pelicula');
-
-        let selectedMovie = null;
-
-      
-        for (let movie of movies) {
-            const title = movie.getElementsByTagName('titulo')[0]?.textContent || 'Título no disponible';
-            const movieSlug = title.replace(/\s+/g, '-').toLowerCase();
-
-            if (movieSlug === movieId) {
-                selectedMovie = movie;
-                break;
-            }
-        }
-
-        if (!selectedMovie) {
-            throw new Error('Película no encontrada.');
-        }
-
-      
-        const title = selectedMovie.getElementsByTagName('titulo')[0]?.textContent || 'Título no disponible';
-        const type = selectedMovie.getElementsByTagName('type')[0]?.textContent || 'Género no especificado';
-        const description = selectedMovie.getElementsByTagName('descripcion')[0]?.textContent || 'Sin descripción';
-        const actors = Array.from(selectedMovie.getElementsByTagName('actor') || []).map(actor => actor.textContent).join(', ') || 'Actores no disponibles';
-        const year = selectedMovie.getElementsByTagName('anio')[0]?.textContent || 'Año desconocido';
-        const image = selectedMovie.getElementsByTagName('imagen')[0]?.textContent || 'https://via.placeholder.com/300';
-
-      
-        const movieDetails = document.getElementById('movieDetails');
-        movieDetails.innerHTML = `
-            <section class="movie-detail-container">
-                <img src="${image}" alt="${title}" class="movie-detail-image">
-                <div class="movie-detail-info">
-                    <h1>${title} (${year})</h1>
-                    <p><strong>Género:</strong> ${type}</p>
-                    <p><strong>Descripción:</strong> ${description}</p>
-                    <p><strong>Actores:</strong> ${actors}</p>
-                </div>
-            </section>
-        `;
-    } catch (error) {
-        console.error('Error loading movie details:', error);
-        const movieDetails = document.getElementById('movieDetails');
-        movieDetails.innerHTML = `<p style="color: red;">Ocurrió un error al cargar los detalles de la película.</p>`;
-    } finally {
-      
-        const loadingIndicator = document.querySelector('.loading-indicator');
-        if (loadingIndicator) loadingIndicator.remove();
+function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search)
+    return urlParams.get(name)
+  }
+  
+  function showLoading() {
+    const loadingScreen = document.querySelector(".loading-screen")
+    loadingScreen.classList.remove("hidden")
+  }
+  
+  function hideLoading() {
+    const loadingScreen = document.querySelector(".loading-screen")
+    loadingScreen.classList.add("hidden")
+  }
+  
+  function loadMovieDetails() {
+    showLoading()
+    const movieId = getQueryParam("id")
+  
+    if (!movieId) {
+      hideLoading()
+      showError("Movie ID not found!")
+      return
     }
-}
+  
+    const xhr = new XMLHttpRequest()
+    xhr.open("GET", "movies.xml", true)
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4) {
+        hideLoading()
+        if (xhr.status === 200 && xhr.responseXML) {
+          const movie = getMovieById(xhr.responseXML, movieId)
+          if (movie) {
+            displayMovieDetails(movie)
+          } else {
+            showError("Movie not found!")
+          }
+        } else {
+          showError("Error loading movie data!")
+        }
+      }
+    }
+    xhr.send()
+  }
+  
+  function getMovieById(xml, movieId) {
+    const movieNodes = xml.getElementsByTagName("movie")
+    for (let i = 0; i < movieNodes.length; i++) {
+      const id = movieNodes[i].getAttribute("id")
+      if (id === movieId) {
+        return {
+          id,
+          title: movieNodes[i].getElementsByTagName("title")[0].textContent,
+          genre: movieNodes[i].getElementsByTagName("genre")[0].textContent,
+          image: movieNodes[i].getElementsByTagName("image")[0].textContent,
+          actors: movieNodes[i].getElementsByTagName("actors")[0].textContent,
+          description: movieNodes[i].getElementsByTagName("description")[0].textContent,
+          trailer: movieNodes[i].getElementsByTagName("trailer")[0].textContent,
+          year: movieNodes[i].getElementsByTagName("year")?.[0]?.textContent || "N/A",
+          rating: movieNodes[i].getElementsByTagName("rating")?.[0]?.textContent || "N/A",
+        }
+      }
+    }
+    return null
+  }
+  
+  function displayMovieDetails(movie) {
+    const movieDetailsContainer = document.getElementById("movieDetails")
+  
+    const content = `
+          <div class="movie-details">
+              <div class="poster-container">
+                  <img 
+                      src="${movie.image}" 
+                      alt="${movie.title}" 
+                      class="movie-poster"
+                      loading="lazy"
+                      onerror="this.src='placeholder.jpg'"
+                  >
+              </div>
+              <div class="movie-info">
+                  <div>
+                      <h1 class="movie-title">${movie.title}</h1>
+                      <div class="movie-meta">
+                          <span class="genre-tag">${movie.genre}</span>
+                          ${movie.year !== "N/A" ? `<span>${movie.year}</span>` : ""}
+                          ${movie.rating !== "N/A" ? `<span>⭐ ${movie.rating}</span>` : ""}
+                      </div>
+                  </div>
+                  
+                  <p class="movie-description">${movie.description}</p>
+                  
+                  <div class="cast-section">
+                      <h3 class="section-title">Cast</h3>
+                      <p class="cast-list">${movie.actors}</p>
+                  </div>
+                  
+                  <div class="trailer-container">
+                      <iframe 
+                          src="${movie.trailer}" 
+                          frameborder="0" 
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                          allowfullscreen
+                      ></iframe>
+                  </div>
+              </div>
+          </div>
+      `
+  
+    movieDetailsContainer.innerHTML = content
+  
 
-
-window.onload = loadMovieDetails;
+    const videoBackground = document.getElementById("video-background")
+    try {
+    
+      const videoId = movie.trailer.split("/").pop()
+    
+      videoBackground.src = `https://www.youtube.com/v/${videoId}`
+    } catch (error) {
+      console.error("Error setting up background video:", error)
+      
+    }
+  }
+  
+  function showError(message) {
+    const movieDetailsContainer = document.getElementById("movieDetails")
+    movieDetailsContainer.innerHTML = `
+          <div class="error-message">
+              <h2>${message}</h2>
+              <p>Please try again or return to the home page.</p>
+          </div>
+      `
+  }
+  
+  document.addEventListener("DOMContentLoaded", loadMovieDetails)
+  
+  
